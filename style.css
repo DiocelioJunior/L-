@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #07040c;
+    font-family: "Sora", sans-serif;
+}
+
+nav{
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    display: flex ;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(3,3,3,0.5) 35%, rgba(0,0,0,0.005) 73%);
+}
+
+.logo{
+    margin-left: 25px;
+}
+
+.logo h1{
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+}
+
+.home{
+    width: 100%;
+    height: 350px;
+    background-image: url(./assets/img/bck.jpg);
+    background-size: cover;
+}
+
+.home-txt{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    background: linear-gradient(360deg, rgba(3,3,3,0.5) 35%, rgba(0,0,0,0.005) 73%);
+}
+
+.home-txt-container{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(7,4,12,0) 25%, rgba(7,4,12,0.5994047277113971) 50%, rgba(7,4,12,0.8374999658066351) 74%, rgba(7,4,12,1) 85%);
+}
+
+.home-txt h1{
+    font-size: 1.4rem;
+    color: #fff;
+    margin-left: 25px;
+}
+
+.home-txt p{
+    font-size: 0.8rem;
+    color: #fff;
+    margin-left: 25px;
+}
+
+.line{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line span{
+    color: #fff;
+}
+
+.txt{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.txt h3{
+    font-size: 28px;
+    margin-left: 25px;
+    color: #fff;
+}
+
+.builds-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: none;
+    gap: 1rem; 
+    padding: 1rem; 
+    
+}
+
+.builds-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+.card{
+    width: 150px; 
+    height: 200px;
+    flex: 0 0 auto; 
+    scroll-snap-align: start; 
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;
+    background-size: cover;
+    background-color: #231d42;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.card-txt{
+    width: 100%;
+    height: 70px;
+    background-color: #231d42;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-txt span{
+    color: #fff;
+    font-size: 32px;
+}
+
+.search-champions{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/img/bck2.jpg');
+    background-size: cover;
+}
+
+.search-container{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, rgba(7,4,12,0) 25%, rgba(7,4,12,0.5994047277113971) 50%, rgba(7,4,12,0.8374999658066351) 74%, rgba(7,4,12,1) 85%);
+}
+
+.search-champions label{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.search-champions input{
+    width: 80%;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.search{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champions{
+ 
+}
+
+.champion{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.champion img{
+    width: 70px;
+}
+
+.champion p{
+    color: #fff;
+}
