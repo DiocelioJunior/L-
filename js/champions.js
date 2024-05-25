@@ -33,12 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adiciona um novo div para cada campeão no elemento champions, incluindo as tags
         champions.innerHTML += `
             <div class="champion">
-            <div class="champion-info"
-            >
-                <p>${item}</p>
+            <div class="champion-info">
                 <img src="https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/${item}.png" alt="${item}">
                 </div>
                 <div class="tags">
+                <h1>${item}</h1>
                 <p>${tags}</p>
                 </div>
             </div>`;

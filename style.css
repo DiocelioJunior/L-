@@ -181,8 +181,12 @@ nav{
 
 .search-champions input{
     width: 80%;
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
+}
+
+.search-champions input::placeholder{
+    margin-left: 15px;
 }
 
 .search{
@@ -193,15 +197,17 @@ nav{
     align-items: center;
 }
 
-.champions{
- 
+.champion{
+ display: flex;
+ flex-direction: row;
+ margin-bottom: 10px;
+ margin-left: 25px;
+ gap: 10px;
 }
 
-.champion{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: flex-end;
+.champion h1{
+    font-size: 22px;
+    color: #fff;
 }
 
 .champion img{
