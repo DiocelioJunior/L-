@@ -151,6 +151,8 @@ nav{
     font-size: 32px;
 }
 
+/*Champion.html*/
+
 .search-champions{
     height: 350px;
     width: 100%;
@@ -185,7 +187,6 @@ nav{
     border-radius: 5px;
     margin-top: 10px;
 }
-
 
 .search{
     width: 100%;
@@ -222,4 +223,36 @@ nav{
 
 .tags p{
     margin-top: 5px;
+}
+
+/*Itens.html*/
+.champion-select-container{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.champion-select{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, rgba(7,4,12,0) 25%, rgba(7,4,12,0.5994047277113971) 50%, rgba(7,4,12,0.8374999658066351) 74%, rgba(7,4,12,1) 85%);
+}
+
+.champion-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champion-name h1{
+    color: #fff;
 }
