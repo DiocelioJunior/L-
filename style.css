@@ -246,6 +246,19 @@ nav{
     background: linear-gradient(180deg, rgba(7,4,12,0) 25%, rgba(7,4,12,0.5994047277113971) 50%, rgba(7,4,12,0.8374999658066351) 74%, rgba(7,4,12,1) 85%);
 }
 
+.champion-select label{
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.champion-select select{
+    background-color: #07040c;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
 .champion-name{
     width: 100%;
     display: flex;
@@ -255,4 +268,78 @@ nav{
 
 .champion-name h1{
     color: #fff;
+}
+
+.champion-stats{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.stats-value{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.stats-icon{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-icon img{
+
+    width: 75%;
+    height: 75%;
+}
+
+.value{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.value h1{
+    color: #fff;
+}
+
+.value p{
+    color: #fff;
+    font-size: 12px;
+}
+
+.itens-grid{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.itens{
+    width: 27%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.item{
+    width: 100%;
+    height: 48%;
+    border-radius: 10px;
+    border: 1px solid #fff;
 }

@@ -30,19 +30,138 @@ document.addEventListener('DOMContentLoaded', () => {
             function readChampion() {
                 const imageChampion = document.getElementById("champion-select");
                 const storedChampion = localStorage.getItem('selectedChampion');
-                const nameChampion = document.getElementById('champion-name')
+                const nameChampion = document.getElementById('champion-name');
+                const statsChampion = document.getElementById("stats-1");
+                const statsChampion2 = document.getElementById("stats-2");
+                const levelChampion = document.getElementById("levelSelect")
 
                 if (storedChampion) {
                     const championObject = JSON.parse(storedChampion);
-                    const urlChampion = championObject.id
+                    const urlChampion = championObject.id;
+                    var levelSelectValue = 1;
+                
+                    levelChampion.addEventListener('change', selectLevel);
 
                     imageChampion.style.backgroundImage = `url(https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${urlChampion}_0.jpg)`
-                    nameChampion.innerHTML = `
-                    <h1>${urlChampion}</h1>
-                    `
-                    
-                    console.log(championObject.stats)
-                };
+                
+                    function selectLevel() {
+                        levelSelectValue = levelChampion.value
+                        updateStats();
+                    }
+                
+                    function updateStats() {
+                        const hpValue = championObject.stats.hp + (championObject.stats.hpperlevel * (levelSelectValue - 1)); // Ajusta o cálculo de acordo com o nível
+                        const hpRegenValue = championObject.stats.hpregen + (championObject.stats.hpregenperlevel * (levelSelectValue - 1));
+                        const mpValue = championObject.stats.mp + (championObject.stats.mpperlevel * (levelSelectValue - 1));
+                        const mpRegenValue = championObject.stats.mpregen + (championObject.stats.mpregenperlevel * (levelSelectValue - 1));
+                        const armorValue = championObject.stats.armor + (championObject.stats.armorperlevel * (levelSelectValue - 1));
+                        const attackDamageValue = championObject.stats.attackdamage + (championObject.stats.attackdamageperlevel * (levelSelectValue - 1));
+                        const spellBlockValue = championObject.stats.spellblock + (championObject.stats.spellblockperlevel * (levelSelectValue - 1));
+                        const critValue = championObject.stats.crit + (championObject.stats.critperlevel * (levelSelectValue - 1));
+                        const moveSpeedValue = championObject.stats.movespeed;
+                        const attackRangeValue = championObject.stats.attackrange;
+                
+                        statsChampion.innerHTML = `
+                            <div class="stats-value">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Health</p>
+                                    <h1>${hpValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value hp-regen">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Health Regen.</p>
+                                    <h1>${hpRegenValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value mp">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Mana</p>
+                                    <h1>${mpValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value mp-regen">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Mana Regen.</p>
+                                    <h1>${mpRegenValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value armor">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Armor</p>
+                                    <h1>${armorValue}</h1>
+                                </div>
+                            </div>
+                        `;
+                
+                        statsChampion2.innerHTML = `
+                            <div class="stats-value attack-damage">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Attack Damage</p>
+                                    <h1>${attackDamageValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value spell-block">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Magic Resist.</p>
+                                    <h1>${spellBlockValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value crit">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Crit. Damage</p>
+                                    <h1>${critValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value move-speed">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Move Speed</p>
+                                    <h1>${moveSpeedValue}</h1>
+                                </div>
+                            </div>
+                            <div class="stats-value attack-range">
+                                <div class="stats-icon">
+                                    <img src="">
+                                </div>
+                                <div class="value">
+                                    <p>Attack Range</p>
+                                    <h1>${attackRangeValue}</h1>
+                                </div>
+                            </div>
+                        `;
+                    }
+                
+                    // Inicializa as estatísticas no carregamento da página
+                    updateStats();
+                }
+                
             };
 
             readChampion()
